@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.todo-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+.todo-container .todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.todo-container .todo-header h1 {
+  margin: 0;
+  color: #333;
+  transition: color 0.3s;
+}
+.todo-container .input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+.todo-container .input-section .task-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+.todo-container .input-section .task-input:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+.todo-container .input-section .add-button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+.todo-container .input-section .add-button:hover {
+  background-color: #45a049;
+}
+.todo-container .tasks-list {
+  min-height: 200px;
+  border: 1px dashed #ddd;
+  border-radius: 5px;
+  padding: 1rem;
+  transition: border-color 0.3s;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.task-item.completed {
+  background-color: #e0ffe0;
+}
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #888;
+}
+.task-item .task-text {
+  flex: 1;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s;
+}
+.task-item .task-date {
+  font-size: 12px;
+  color: #666;
+  margin: 0 10px;
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+.task-item .delete-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+.task-item .delete-button:hover {
+  background-color: #e60000;
+}
+
+/* ========== Темная тема ========== */
+:root[data-theme=dark] .todo-container {
+  background: #1e1e1e;
+}
+:root[data-theme=dark] .todo-container .todo-header h1 {
+  color: #fff;
+}
+:root[data-theme=dark] .todo-container .input-section .task-input {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+:root[data-theme=dark] .todo-container .tasks-list {
+  border-color: #444;
+}
+:root[data-theme=dark] .task-item {
+  background-color: #2b2b2b;
+}
+:root[data-theme=dark] .task-item.completed {
+  background-color: #355e35;
+}
+:root[data-theme=dark] .task-item.completed .task-text {
+  color: #aaa;
+}
+:root[data-theme=dark] .task-item .task-text {
+  color: #eaeaea;
+}
+:root[data-theme=dark] .task-item .task-date {
+  color: #999;
+}
+:root[data-theme=dark] .task-item .delete-button {
+  background-color: #d9534f;
+}
+:root[data-theme=dark] .task-item .delete-button :root[data-theme=dark] .todo-container .input-section .add-button {
+  background-color: #4caf50;
+}
+:root[data-theme=dark] .task-item .delete-button :root[data-theme=dark] .todo-container .input-section .add-button:hover {
+  background-color: #45a049;
+}
+:root[data-theme=dark] .task-item .delete-button :root[data-theme=dark] .task-item .delete-button {
+  background-color: #4caf50;
+}
+:root[data-theme=dark] .task-item .delete-button :root[data-theme=dark] .task-item .delete-button:hover {
+  background-color: #45a049;
+}
+:root[data-theme=dark] .task-item .delete-button:hover {
+  background-color: #c9302c;
+}/*# sourceMappingURL=Todo.css.map */

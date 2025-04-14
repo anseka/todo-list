@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* Глобальные стили для светлой и темной темы */
+:root {
+  --background-light: #f4f4f9;
+  --background-dark: #121212;
+  --text-light: #333;
+  --text-dark: #fff;
+  --button-light: #007bff;
+  --button-dark: #004085;
+}
+
+/* Стили для светлой темы */
+:root[data-theme=light] {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body[data-theme=light] {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+/* Стили для темной темы */
+:root[data-theme=dark] {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+body[data-theme=dark] {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Применение цвета кнопок */
+button {
+  background-color: var(--button-light);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+:root[data-theme=dark] button {
+  background-color: var(--button-dark);
+}/*# sourceMappingURL=App.css.map */

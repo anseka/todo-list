@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333;
+}
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+.theme-toggle .theme-text {
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+.theme-toggle .theme-icons {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.theme-toggle .sun-icon,
+.theme-toggle .moon-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+.theme-toggle .sun-icon {
+  fill: #ffd700;
+  opacity: 1;
+}
+.theme-toggle .moon-icon {
+  fill: #666;
+  opacity: 0;
+}
+
+/* Светлая тема */
+:root[data-theme=light] .theme-toggle {
+  background: #ffffff;
+  border-color: #ddd;
+  color: #333;
+}
+:root[data-theme=light] .theme-toggle .theme-text {
+  color: #333;
+}
+:root[data-theme=light] .theme-toggle .sun-icon {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+:root[data-theme=light] .theme-toggle .moon-icon {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+
+/* Тёмная тема */
+:root[data-theme=dark] .theme-toggle {
+  background: #2c2c2c;
+  border-color: #555;
+  color: #f0f0f0;
+}
+:root[data-theme=dark] .theme-toggle .theme-text {
+  color: #f0f0f0;
+}
+:root[data-theme=dark] .theme-toggle .sun-icon {
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+}
+:root[data-theme=dark] .theme-toggle .moon-icon {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}/*# sourceMappingURL=ThemeToggle.css.map */
